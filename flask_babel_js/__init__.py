@@ -43,9 +43,9 @@ JAVASCRIPT = r"""
                 if (length && v.length < length|0) {
                     if (length.charAt(0) === "0" &&
                         (type === "d" || type === "f")) {
-                        output += Array(length|0).join("0");
+                        output += Array((length|0) - v.length).join("0");
                     } else {
-                        output += Array(length|0).join(" ");
+                        output += Array((length|0) - v.length).join(" ");
                     }
                 }
 
