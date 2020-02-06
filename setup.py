@@ -1,4 +1,9 @@
+import pathlib
 from setuptools import setup
+
+
+HERE = pathlib.Path(__file__).parent
+README = (HERE/"README.md").read_text()
 
 setup(
     name="Flask-Babel-JS",
@@ -8,6 +13,8 @@ setup(
     author="Efe Mert Demir",
     author_email="efemertdemir@hotmail.com",
     description="Flask extension to add Flask-Babel translations in JS",
+    long_description=README,
+    long_description_content_type="text/markdown",
     packages=["flask_babel_js"],
     zip_safe=False,
     include_package_data=True,
