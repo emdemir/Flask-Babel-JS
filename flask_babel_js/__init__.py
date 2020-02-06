@@ -153,8 +153,6 @@ class BabelJS(object):
 
                 catalog[text][plural] = value
 
-                del catalog[key]
-
         js.append(json.dumps(catalog, indent=4))
 
         js.append(";\n")
