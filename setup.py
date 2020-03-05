@@ -7,7 +7,7 @@ README = (HERE/"README.md").read_text()
 
 setup(
     name="Flask-Babel-JS",
-    version="1.0.1",
+    version="1.0.2",
     url="https://github.com/emdemir/Flask-Babel-JS/",
     license="BSD",
     author="Efe Mert Demir",

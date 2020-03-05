@@ -145,13 +145,15 @@ class BabelJS(object):
         # instance of NullTranslations.
         catalog = translations._catalog.copy()
 
-        for key, value in catalog.items():
+        # copy()ing the catalog here because we're modifying the original copy.
+        for key, value in catalog.copy().items():
             if isinstance(key, tuple):
                 text, plural = key
                 if text not in catalog:
                     catalog[text] = {}
 
                 catalog[text][plural] = value
+                del catalog[key]
 
         js.append(json.dumps(catalog, indent=4))
 
