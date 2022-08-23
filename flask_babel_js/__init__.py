@@ -165,7 +165,7 @@ class BabelJS(object):
             for m in metadata.splitlines():
                 if m.lower().startswith("plural-forms:"):
                     js.append("    babel.plural = ")
-                    js.append(c2js(m.lower().split("plural=")[1]))
+                    js.append(c2js(m.lower().split("plural=")[1].rstrip(';')))
 
         js.append("""
 
