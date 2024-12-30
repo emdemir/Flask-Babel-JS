@@ -28,3 +28,5 @@ MANIFEST
 ### Emacs
 
 .log
+
+.env
